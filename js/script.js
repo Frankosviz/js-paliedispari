@@ -39,3 +39,30 @@ console.log(isPalindrome(userWord));
 
 
 
+
+const userChoice = prompt('Scrivi pari o dispari');
+const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+
+const aINumber = getRandomInt(1,5);
+
+console.log('utente ha scelto: ', userChoice, userNumber);
+console.log('l\ia ha scelto: ',aINumber);
+
+let result = oddOrEven(userNumber + aINumber);
+
+if(result == userChoice) {
+    console.log('Hai vinto');
+    } else {
+    console.log('Ho vinto io');
+    }
+function getRandomInt(min, max){
+    return Math.floor( Math.random() * (max - min + 1)) + min;
+}
+
+function oddOrEven(number){
+    if(number % 2 === 0){
+        return 'pari';
+    } else {
+        return 'dispari';
+    }
+}
